@@ -78,8 +78,9 @@ def menu():
         print("Выберете действие:\n",
               "1 - элементы только в A или только в B\n",
               "2 - несколько в A или несколько в B\n",
-              "3 - уникальные в A, несколько в B\n")
-        return get_correct_inp([1, 2, 3],
+              "3 - уникальные в A, несколько в B\n",
+              "4 - Выход")
+        return get_correct_inp([1, 2, 3, 4],
                                 "Введите номер действия: ")
         
 
@@ -95,6 +96,8 @@ def main():
             second_task()
         if task == 3:
             third_task()
+        if task == 4:
+            break
 
 if __name__ == "__main__":
     main()
