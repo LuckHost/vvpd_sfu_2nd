@@ -44,7 +44,7 @@ def second_task():
     arr_b = sorted(arr_b)
     answer_a = []
     answer_b = []
-    for i in range(int(arr_len/2 + arr_len%2)):
+    for i in range(arr_len):
         if arr_a.count(arr_a[i]) > 1:
             answer_a.append(arr_a[i])
         if arr_b.count(arr_b[i]) > 1:
