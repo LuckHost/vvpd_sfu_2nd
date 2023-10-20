@@ -30,6 +30,28 @@ def first_task():
     [i for i in arr_b if i not in arr_a]
     print("Ответ: ", 
           sorted(answer))
+    
+def second_task():
+    """ returns second task answer """
+    arr_len = get_correct_inp(range(1, 10)
+                              , "Введите длину массивов: ")
+    arr_a = get_random_array(arr_len)
+    arr_b = get_random_array(arr_len)
+    print("Массивы: \n",
+          arr_a, "\n",
+          arr_b)
+    arr_a = sorted(arr_a)
+    arr_b = sorted(arr_b)
+    answer_a = []
+    answer_b = []
+    for i in range(int(arr_len/2 + arr_len%2)):
+        if arr_a.count(arr_a[i]) > 1:
+            answer_a.append(arr_a[i])
+        if arr_b.count(arr_b[i]) > 1:
+            answer_b.append(arr_b[i])
+    print("Ответ:\n", 
+          "Массив А: ", sorted(set(answer_a)), "\n",
+          "Массив В: ", sorted(set(answer_b))) 
 
 def menu():
     """ user menu """
@@ -49,6 +71,8 @@ def main():
     task = menu()
     if task == 1:
         first_task()
+    if task == 2:
+        second_task()
 
 if __name__ == "__main__":
     main()
